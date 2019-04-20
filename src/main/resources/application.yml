@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: crawler-kindness
+  liquibase:
+    change-log: classpath:liquibase\master.xml
+
+

@@ -1,0 +1,45 @@
+server:
+  port: 9994
+
+spring:
+  datasource:
+    url: jdbc:postgresql://www.iamcrawler.cn:5432/postgres?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+    username: postgres
+    password: postgres
+    driver-class-name:  org.postgresql.Driver
+  redis:
+    host: www.iamcrawler.cn
+    port: 6379
+    password: 123456
+    database: 0
+  application:
+    name: crawler-kindness
+  rabbitmq:
+    host: www.iamcrawler.cn
+    port: 5672
+    username: liuliang
+    password: liuliang
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9990/eureka/
+
+
+init-db: true
+#txmanager地址
+tm:
+  manager:
+    url: http://localhost:6000/tx/manager/
+logging:
+  level:
+    com:
+      codingapi: info
